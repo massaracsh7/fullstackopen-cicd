@@ -33,4 +33,5 @@ jobs:
         run: npm run build
 
       - name: Trigger deployment
+        if: github.ref == 'refs/heads/main' && success()
         run: curl ${{ secrets.RENDER_DEPLOY_HOOK_URL }}
