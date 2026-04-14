@@ -31,3 +31,6 @@ jobs:
 
       - name: Build project
         run: npm run build
+
+      - name: Trigger deployment
+        run: curl ${{ secrets.RENDER_DEPLOY_HOOK_URL }}

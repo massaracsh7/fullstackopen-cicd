@@ -12,3 +12,7 @@ const start = async () => {
 }
 
 start()
+
+app.get('/health', (re, res) => {
+  res.send('ok')
+})
